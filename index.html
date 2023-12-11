@@ -43,7 +43,10 @@
       </nav>
 
       <div class="text-box">
-        <h1>Welcome to Jabalpur College of Computers and Communications</h1>
+        <h1>
+          Welcome to <br />
+          <span> Jabalpur College of Computers and Communications </span>
+        </h1>
         <p></p>
         <a href="contact.html" class="hero-btn"> Book now </a>
         <a href="gallery.html" class="hero-btn">View more</a>
@@ -84,9 +87,9 @@
     <section class="campus">
       <h1>Our Campuses</h1>
       <p>
-        The main campus of JCCC is located in Dwarka, Delhi. It is a spread over
+        The main campus of JCCC is located in Dwarka, Jabalpur. It is a spread over
         an area of 145 acres of land. <br />
-        Govt. of NCT Delhi has expanded the JCCC in 2020 further into two more
+        Govt. of NCT Jabalpur has expanded the JCCC in 2020 further into two more
         campuses namely East Campus (Formerly Ambedkar Institute of Advanced
         Communication <br />
         Technologies & Research) at Geeta Colony and West Campus (Formerly Ch.
@@ -95,21 +98,21 @@
 
       <div class="row">
         <div class="campus-col">
-          <img src="Images/west campus.webp" />
+          <img src="Images/HomePage/img_2.png" />
           <div class="layer">
             <h3>West Campus</h3>
           </div>
         </div>
 
         <div class="campus-col">
-          <img src="Images/main campus.webp" />
+          <img src="Images/HomePage/img_5.jpg" />
           <div class="layer">
             <h3>Main Campus</h3>
           </div>
         </div>
 
         <div class="campus-col">
-          <img src="Images/east campus.jpeg" />
+          <img src="Images/HomePage/img_6.jpg" />
           <div class="layer">
             <h3>East Campus</h3>
           </div>
@@ -178,6 +181,73 @@
       </div>
     </section>
 
+    <!-- Our Team -->
+    <div class="main">
+      <div class="profile-card">
+        <div class="img">
+          <img src="./Images//Teams/team-1.jpg" />
+        </div>
+        <div class="caption">
+          <h3>Bamleshwar Rao</h3>
+          <p>Academic Director</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="img">
+          <img src="./Images/Teams/team-2.jpg" />
+        </div>
+        <div class="caption">
+          <h3>Mr. Pawan Mahure</h3>
+          <p>Principal-Incharge</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="img">
+          <img src="./Images/Teams/team-3.jpg" />
+        </div>
+        <div class="caption">
+          <h3>Ms. Shilpi Sharma</h3>
+          <p>HOD</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end_our_team -->
+
+    <!-- Happy Client -->
+    <div id="counter">
+      <div class="item">
+        <h1 class="count" data-number="232"></h1>
+        <h3 class="text">Happy Client</h3>
+      </div>
+      <div class="item">
+        <h1 class="count" data-number="521"></h1>
+        <h3 class="text">Projects</h3>
+      </div>
+      <div class="item">
+        <h1 class="count" data-number="1463"></h1>
+        <h3 class="text">Hours Of Support </h3>
+      </div>
+      <div class="item">
+        <h1 class="count" data-number="25"></h1>
+        <h3 class="text">Hard Workers</h3>
+      </div>
+    </div>
+    <!-- End_Happy_Client -->
     <!-- Testimonials -->
 
     <section class="testimonials">
@@ -289,7 +359,7 @@
           <p>JCCC COLLEGE(JCCC)</p>
           <p>
             Formerly Netaji Subhas Institute of Technology(NSIT) <br /><br />
-            (Govt. of NCT of Delhi)
+            (Govt. of NCT of Jabalpur)
           </p>
         </div>
       </div>
@@ -323,6 +393,29 @@
         var floater = document.getElementById("floaterNotice");
         floater.style.display = "none";
       }
+    </script>
+
+    <!-- JS for Happy Client -->
+    <script>
+      let count = document.querySelectorAll(".count");
+      let arr = Array.from(count);
+
+      arr.map(function (item) {
+        let startnumber = 0;
+
+        function counterup() {
+          startnumber++;
+          item.innerHTML = startnumber;
+
+          if (startnumber == item.dataset.number) {
+            clearInterval(stop);
+          }
+        }
+
+        let stop = setInterval(function () {
+          counterup();
+        }, 50);
+      });
     </script>
   </body>
 </html>

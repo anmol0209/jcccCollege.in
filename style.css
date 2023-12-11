@@ -11,7 +11,7 @@ body {
 header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.8)), url("Images/Background.webp");
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.8)), url("Images/HomePage/img_1.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -88,6 +88,9 @@ nav h1 {
 
 .text-box h1 {
     font-size: 61px;
+}
+.text-box h1 span{
+    color: red;
 }
 
 .text-box p {
@@ -256,6 +259,8 @@ h3 {
 
 .campus-col img {
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .layer {
@@ -353,6 +358,116 @@ h3 {
         height: auto;
     }
 }
+
+/* Our_Team */
+.main {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0c5db9;
+}
+  .profile-card{
+    position: relative;
+    font-family: sans-serif;
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+    margin: 0 25px;
+  }
+  .profile-card:hover{
+    border-radius: 10px;
+    height: 260px;
+  }
+  .profile-card .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 99;
+  }
+  .profile-card:hover .img{
+    transform: translateY(-60px);
+  }
+  .img img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+  }
+  .profile-card:hover img{
+    border-radius: 10px;
+  }
+  .caption{
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+  }
+  .profile-card:hover .caption{
+    opacity: 1;
+  }
+  .caption h3{
+    font-size: 21px;
+    font-family: sans-serif;
+  }
+  .caption p{
+    font-size: 15px;
+    color: #0c52a1;
+    font-family: sans-serif;
+    margin: 2px 0 9px 0;
+  }
+  .caption .social-links a{
+    color: #333;
+    margin-right: 15px;
+    font-size: 21px;
+    transition: .6s;
+  }
+  .social-links a:hover{
+    color: #0c52a1;
+  }
+/* End_our_team */
+
+/* Happy_Client */
+
+#counter {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #e6e6e7;
+    padding: 40px 0px;
+    width: 100%;
+}
+  #counter .item{
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    padding: 35px 40px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.34);
+  -moz-box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.34);
+  box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.34);
+  } 
+  #counter .item .count{
+    color: #e8b12d;
+    margin-bottom: 5px;
+    font-size: 40px;
+  }
+  #counter .item h3{
+    color: #4f4e28;
+    text-transform: capitalize;
+  }
+
+
+/* end_happy_client */
 
 /* --------- Testimonials ----------- */
 
