@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Page Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Brief description of your website or page content.">
+    <meta name="keywords" content="bba in jabalpur, bca in jabalpur, bba colleges in jabalpur, bca colleges in jabalpur, bba colleges in jabalpur fees, bba course in jabalpur, bba fees in jabalpur, bba llb colleges in jabalpur, bca course in jabalpur, bca fees in jabalpur, bca government colleges in jabalpur, best bba colleges in jabalpur, best colleges for bba in jabalpur, best colleges for bca in jabalpur, government bba colleges in jabalpur, jabalpur bba colleges, top bba colleges in jabalpur, top bca colleges in jabalpur, mcom in jabalpur">
+    <!-- for better social media handling -->
+    <meta property="og:title" content="JCCC College - Your Title Here">
+    <meta property="og:description" content="Brief description of your website or page content.">
+    <meta property="og:image" content="URL to an image representing your page">
+    <meta property="og:url" content="https://www.jccccollege.in/index.html">
+    
+
+
     <title>Homepage | JCCC</title>
     <link rel="icon" href="Images/favicon.png" />
-
     <link rel="stylesheet" href="style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +45,7 @@
             <li><a href="courses.html">COURSES</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="contact.html">GALLERY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -417,5 +426,28 @@
         }, 50);
       });
     </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz2WB13PBvrAjg3E3NWVmkYYOJnODIWp4jEETY26ZDHasPbbkfRE8Y0uXE3K70W7XiZGw/exec'
+      const form = document.querySelector('#form')
+      const btn = document.querySelector('#submit')
+  
+  
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        btn.disabled = true
+        btn.innerHTML = "Loading..."
+  
+        console.log(form)
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => { 
+                btn.disabled = false
+        btn.innerHTML = "Submit"
+              alert('Success!', response) })
+          .catch(error => {
+                       btn.disabled = false
+        btn.innerHTML = "Submit"
+              alert('Error!', error.message)})
+      })
+  </script>
   </body>
 </html>
